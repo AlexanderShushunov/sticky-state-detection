@@ -9,13 +9,6 @@ body {
   padding: var(--global-padding);
 }
 
-.top-guard {
-  position: relative;
-  margin-bottom: calc(-1 * var(--global-padding));
-  top: calc(-1 * var(--global-padding));
-  height: var(--global-padding);
-}
-
 .header {
   font-family: Helvetica, serif;
   font-size: 50px;
@@ -51,14 +44,6 @@ body {
 .action-button.sticky {
   box-shadow: rgb(255 255 255) 0 0 100px;
 }
-
-.bottom-guard {
-  position: relative;
-  margin-top: calc(-1 * var(--global-padding));
-  top: calc(var(--global-padding));
-  height: var(--global-padding);
-}
-
 
 .big-content {
   height: 200vh;

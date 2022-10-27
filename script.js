@@ -8,6 +8,7 @@ function addStickyStateDetection({ elem, guard }) {
       });
     },
     {
+      rootMargin: '-10px', // see --global-padding
       threshold: 1.0,
     },
   );
