@@ -1,0 +1,56 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --global-padding: 10px;
+  margin: 0;
+  padding: var(--global-padding);
+}
+
+.header {
+  font-family: Helvetica, serif;
+  font-size: 50px;
+  text-align: center;
+  background-color: lightcyan;
+  position: sticky;
+  top: var(--global-padding);
+  border-color: transparent;
+  transition: border-bottom .2s ease-in;
+}
+
+.header.sticky {
+  border-bottom: 5px greenyellow solid;
+}
+
+.action-button {
+  font-family: Helvetica, serif;
+  font-size: 30px;
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+  border: none;
+  background-color: aquamarine;
+  position: sticky;
+  bottom: var(--global-padding);
+  transition: box-shadow .2s ease-in;
+}
+
+.action-button:active {
+  background-color: aqua;
+}
+
+.action-button.sticky {
+  box-shadow: rgb(255 255 255) 0 0 100px;
+}
+
+.big-content {
+  height: 200vh;
+  background-color: salmon;
+}
+
+.footer {
+  height: 150px;
+  background-color: lightgray;
+}

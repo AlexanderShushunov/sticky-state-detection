@@ -9,22 +9,41 @@ body {
   padding: var(--global-padding);
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
 .header {
+  position: sticky;
+  top: 0;
+}
+
+.header__content {
   font-family: Helvetica, serif;
   font-size: 50px;
   text-align: center;
   background-color: lightcyan;
-  position: sticky;
-  top: var(--global-padding);
-  border-color: transparent;
-  transition: border-bottom .2s ease-in;
 }
 
-.header.sticky {
+.header__top-guard {
+  position: relative;
+  top: -1px;
+  margin-top: -1px;
+  height: 1px;
+}
+
+.header__content.sticky {
   border-bottom: 5px greenyellow solid;
 }
 
 .action-button {
+  position: sticky;
+  bottom: var(--global-padding);
+}
+
+.action-button__content {
   font-family: Helvetica, serif;
   font-size: 30px;
   width: 100%;
@@ -32,20 +51,30 @@ body {
   margin: 0;
   border: none;
   background-color: aquamarine;
-  position: sticky;
-  bottom: var(--global-padding);
   transition: box-shadow .2s ease-in;
 }
 
-.action-button:active {
+.action-button__content:active {
   background-color: aqua;
 }
 
-.action-button.sticky {
+.action-button__content.sticky {
   box-shadow: rgb(255 255 255) 0 0 100px;
+}
+
+.action-button__bottom-guard {
+  position: relative;
+  bottom: calc(-1px - var(--global-padding));
+  margin-bottom: -1px;
+  height: 1px;
 }
 
 .big-content {
   height: 200vh;
   background-color: salmon;
+}
+
+.footer {
+  height: 150px;
+  background-color: lightgray;
 }
